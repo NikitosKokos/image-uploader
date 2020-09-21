@@ -1,0 +1,477 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Monserrat", sans-serif;
+}
+
+input,
+button,
+textarea {
+  font-family: "Monserrat", sans-serif;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+.upload {
+  width: 100%;
+  height: 100%;
+}
+
+.upload__content {
+  min-height: 100vh;
+  width: 100%;
+  overflow: auto;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+form button {
+  border: none;
+  border-radius: 0;
+}
+
+.card-start {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.card-start_hide {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  display: none;
+}
+
+.card-start__body {
+  width: 400px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  background: #fafafb;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card-start__next {
+  margin: 15px 0px 0px 0px;
+}
+
+.card-start__title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  margin: 0px 0px 16px 0px;
+}
+
+.card-start__format {
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: -0.035em;
+  color: #828282;
+  margin: 0px 0px 30px 0px;
+}
+
+.card-start__drop {
+  background: #f6f8fb;
+  border: 1px dashed #97bef4;
+  border-radius: 12px;
+  width: 100%;
+  padding: 35px 0;
+}
+
+.card-start__icon {
+  margin: 0px auto 40px auto;
+  width: 130px;
+}
+
+.card-start__icon img {
+  width: 100%;
+}
+
+.card-start__descr {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.035em;
+  color: #bdbdbd;
+}
+
+.card-start__or {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.035em;
+  color: #bdbdbd;
+  margin: 20px 0;
+}
+
+.card-start label {
+  cursor: pointer !important;
+}
+
+.card-start__btn {
+  cursor: pointer !important;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  background: #2f80ed;
+  border-radius: 8px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card-start__input {
+  display: none;
+}
+
+.card-upload {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  display: none;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.card-upload_active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  display: block;
+}
+
+.card-upload__body {
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background: #fafafb;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.card-upload__title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  margin: 0px 0px 30px 0px;
+}
+
+.card-upload__progress {
+  background: #f2f2f2;
+  border-radius: 8px;
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+}
+
+.card-upload__platform {
+  width: 100px;
+  height: 6px;
+  background: #2f80ed;
+  border-radius: 8px;
+  display: block;
+  -webkit-animation: platform 1.5s ease infinite;
+          animation: platform 1.5s ease infinite;
+}
+
+@-webkit-keyframes platform {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+
+  100% {
+    -webkit-transform: translate(350%);
+            transform: translate(350%);
+  }
+}
+
+@keyframes platform {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+
+  100% {
+    -webkit-transform: translate(350%);
+            transform: translate(350%);
+  }
+}
+
+.card-successfully {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  display: none;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.card-successfully_active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  display: block;
+}
+
+.card-successfully__body {
+  width: 400px;
+  margin: 0 auto;
+  background: #fafafb;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  padding: 30px;
+}
+
+.card-successfully__icon {
+  width: 50px;
+  margin: 0px auto 10px auto;
+}
+
+.card-successfully__icon img {
+  width: 100%;
+}
+
+.card-successfully__title {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  margin: 0px 0px 25px 0px;
+}
+
+.card-successfully__image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0px 0px 25px 0px;
+}
+
+.card-successfully__image img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-successfully__block {
+  background: #f6f8fb;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  padding: 2px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-successfully__link {
+  padding: 0 20px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: none;
+  white-space: nowrap;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: -0.035em;
+}
+
+.card-successfully__btn {
+  cursor: pointer;
+  background: #2f80ed;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+._container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 15px;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/**
+@media (min-width: 992px){
+   &:hover{
+
+   }
+}
+*/
+
+@media (min-width: 992px) {
+  .card-start__btn:hover {
+    background: #256ac5;
+  }
+
+  .card-successfully__btn:hover {
+    background: #256ac5;
+  }
+}
+
+@media (max-width: 450px) {
+  .card-start__body {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .card-upload__body {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .card-successfully__body {
+    width: 100%;
+    padding: 20px 15px;
+  }
+}
